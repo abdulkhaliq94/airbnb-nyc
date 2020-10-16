@@ -29,3 +29,8 @@ barplot(table(airbnb$room_type), main = "Room Types Guests Prefer",
                                   ylab = "Most Frequently Preferred")
 
 
+# removed outliers 
+# much better plot with left skewed graph
+hist(airbnb_price, breaks=100, main = "Price Distributions",
+                                      xlab = "Price",
+                                      ylab = "Most Frequent Charges")
