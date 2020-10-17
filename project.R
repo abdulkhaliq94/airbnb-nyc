@@ -13,7 +13,7 @@ barplot(table(airbnb$neighbourhood_group), main = "Locations With The Most Listi
 # quantitative
 ## a histogram of the availability of places to stay throughout the year
 hist(airbnb$availability_365, main = "Availability Throughout The Year",
-                              xlab = "Available Places",
+                              xlab = "Days of the year",
                               ylab = "Number of Listings Available")
 
 # quantitative
@@ -28,6 +28,9 @@ barplot(table(airbnb$room_type), main = "Room Types Guests Prefer",
                                   xlab = "Types of Rooms",
                                   ylab = "Most Frequently Preferred")
 
+# ------------------------------------------------------------------------------
+## Outliers
+
 # removing outliers
 airbnb_price <- airbnb$price[airbnb$price <= 500]
 airbnb_price
@@ -39,6 +42,8 @@ hist(airbnb_price, breaks=100, main = "Price Distributions",
                                       ylab = "Most Frequent Charges")
 
 
+# ------------------------------------------------------------------------------
+## mean, median, variance and standard deviation for price
 # mean
 mean(airbnb$price) # mean = 152.7207
 
@@ -53,8 +58,21 @@ var(airbnb$price) # var = 57674.03
 
 # standard deviation
 sd(airbnb$price) # standard deviation = 240.1542
+# ------------------------------------------------------------------------------
 
 
+## mean, median, variance and standard deviation for calculated host listings count
+# mean
+mean(airbnb$calculated_host_listings_count) # mean = 7.14
+
+# median
+median(airbnb$calculated_host_listings_count) # median = 1
+
+# variance
+var(airbnb$calculated_host_listings_count) # var = 1085.868
+
+# standard deviation
+sd(airbnb$calculated_host_listings_count) # sd = 32.95252
 
 
 
