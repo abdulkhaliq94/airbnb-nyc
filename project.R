@@ -80,13 +80,18 @@ sd(airbnb$calculated_host_listings_count) # sd = 32.95252
 
 # ------------------------------------------------------------------------------
 
-## Scatterplots and Correlation
+## Scatter plots and Correlation
+## Scatter plot between price and minimum nights available
 
 plot(price ~ minimum_nights, data = airbnb, 
                                       main = "Price Range and Minimum Nights",
                                       xlab = "Minimum Nights", ylab = "Price")
 
+## Correlation
 
+cor(airbnb$price, airbnb$minimum_nights) # cor = 0.0427
+
+# ------------------------------------------------------------------------------
 
 
 
