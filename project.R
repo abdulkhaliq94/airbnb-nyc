@@ -93,6 +93,39 @@ cor(airbnb$price, airbnb$minimum_nights) # cor = 0.0427
 
 # ------------------------------------------------------------------------------
 
+## Confidence Intervals for the mean 
+
+xbar = mean(airbnb$price)
+s = sd(airbnb$price)
+n = 48895
+  
+t = qt(0.025, 48895-1)  # -1.96
+t
+
+t = qt(0.975, 48895-1)  # 1.96
+t
+
+L = xbar - t* s/sqrt(n) # L = 150.592
+L
+
+U = xbar + t* s/sqrt(n) # u = 154.8494
+U
+
+xbar = mean(airbnb$minimum_nights)
+s = sd(airbnb$minimum_nights)
+n = 48895
+
+t = qt(0.025, 48895-1) # -1.96
+t
+
+t = qt(0.975, 48895-1)  #1.96
+t
+
+L = xbar - t*s/sqrt(n)   # 6.84
+L
+
+U = xbar + t*s/sqrt(n)  #7.2117
+U
 
 
 
