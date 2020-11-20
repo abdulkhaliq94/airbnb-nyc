@@ -4,10 +4,12 @@ airbnb <- read_csv("airbnb.csv", na = "-")
 airbnb <- na.omit(airbnb)
 
 # categorical
-## barplot of the categorical data about the locations with the highest listings across New York City
-barplot(table(airbnb$neighbourhood_group), main = "Locations With The Most Listings",
-                                            xlab = "Five Boroughs Of New York City",
-                                            ylab = "Number of listings")
+## barplot of the categorical data about the locations with the highest
+## listings across New York City
+barplot(table(airbnb$neighbourhood_group), 
+                                      main = "Locations With The Most Listings",
+                                      xlab = "Five Boroughs Of New York City",
+                                      ylab = "Number of listings")
 
 
 # quantitative
@@ -61,7 +63,8 @@ sd(airbnb$price) # standard deviation = 240.1542
 # ------------------------------------------------------------------------------
 
 
-## mean, median, variance and standard deviation for calculated host listings count
+## mean, median, variance and standard deviation for 
+## calculated host listings count
 # mean
 mean(airbnb$calculated_host_listings_count) # mean = 7.14
 
@@ -75,8 +78,13 @@ var(airbnb$calculated_host_listings_count) # var = 1085.868
 sd(airbnb$calculated_host_listings_count) # sd = 32.95252
 
 
+# ------------------------------------------------------------------------------
 
+## Scatterplots and Correlation
 
+plot(price ~ minimum_nights, data = airbnb, 
+                                      main = "Price Range and Minimum Nights",
+                                      xlab = "Minimum Nights", ylab = "Price")
 
 
 
